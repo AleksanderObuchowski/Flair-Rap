@@ -36,7 +36,6 @@ class Flair_Rap:
         print('Loadning model')
         model = LanguageModel.load_language_model(dataset)
         print('Model loaded')
-        model = model.cuda()
         idx2item = model.dictionary.idx2item
         hidden = model.init_hidden(1)
         input = torch.rand(1, 1).mul(len(idx2item)).long().cuda()
