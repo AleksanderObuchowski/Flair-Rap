@@ -5,6 +5,13 @@ A simple language model for generating polish rap lyrics based on flair library
 This project supports word level and char level language model that generates polish rap sequences based on texts from genius.com
 ## Requirements
 All requirements are located in the `requirements.txt` file 
+## Installation
+Just clone this repo 
+If you want to use the pre-trained language models they are stored using git lfs so use
+```
+git lfs get
+```
+to download them
 ## Usage
 ### Creating dictionaries
 Both word and char model needs a dictionary of tokens that it uses. In order to generate new dictionary you can use create_char_dict() and crate_word_dict() functions
@@ -16,7 +23,7 @@ Flair_Rap.create_word_dict(files=['corpus/full_text.txt'], filename= 'dicts/word
 ```
 * `files` is an array of file to generate the dict form a 
 * `filename` is a name of the file to be generated
-### Learing 
+### Learning 
 In order to teach the model you can use `learn_word_model()` and `learn_char_model()` functions
 
 ```python
